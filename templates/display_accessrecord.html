@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+    <nav class="navbar bg-dark">
+        <a href="" class="navbar-brand text-white ps-3">Access Records</a>
+    </nav>
+    <div class="container mt-3">
+        <table class="table table-success table-striped">
+            <thead class="table-dark">
+                <th>Primary Key</th>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Date</th>
+            </thead>
+        {% for aro in accessrecord %}
+            <tbody>
+                <td>{{ aro.pk }}</td>
+                <td>{{ aro.name }}</td>
+                <td>{{ aro.author }}</td>
+                <td>{{ aro.date }}</td>
+            </tbody>
+        {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
